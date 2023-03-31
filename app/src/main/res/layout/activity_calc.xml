@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/calc_background"
+    tools:context=".CalcActivity">
+
+    <TextView
+        android:id="@+id/tv_history"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:textColor="@color/calc_history"
+        android:paddingEnd="10dp"
+        android:paddingStart="10dp"
+        android:textSize="24sp"
+        android:text="TextView"
+        app:layout_constraintBottom_toTopOf="@+id/tv_result"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="2+2 = " />
+
+    <TextView
+        android:id="@+id/tv_result"
+        android:layout_width="400dp"
+        android:layout_height="48dp"
+        android:gravity="end"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:text="4"
+        android:textColor="@color/calc_result"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.746" />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="414dp"
+        android:layout_height="554dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.672">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/calc_btn_percent"
+                style="@style/calc_btn_fn_style"
+                android:text="@string/calc_btn_percent_text" />
+
+            <Button
+                android:id="@+id/calc_btn_ce"
+                style="@style/calc_btn_fn_style"
+                android:text="@string/calc_btn_ce_text" />
+
+            <Button
+                android:id="@+id/calc_btn_clear"
+                style="@style/calc_btn_fn_style"
+                android:text="@string/calc_btn_clear_text" />
+
+            <Button
+                android:id="@+id/calc_btn_back"
+                style="@style/calc_btn_fn_style"
+                android:text="@string/calc_btn_backspace_text" />
+
+        </TableRow>
+
+    </TableLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
