@@ -4,12 +4,54 @@
     <string name="title">Tap me</string>
     <string name="title_text">Android basics</string>
     <string name="button_calc_text">Calculator</string>
+    <string name="button_game_text">Game2048</string>
 
+
+    <string name="game_title">2048</string>
+    <string name="game_score">score/n%s</string>
+    <string name="game_best_score">best score/n%s</string>
+    <string name="game_description">Join the numbers and get to 2048</string>
+    <string name="game_new_btn">new</string>
+    <string name="game_undo_btn">undo</string>
+    <string name="game_win_title">You a winner </string>
+    <string name="game_win_msg">You collect 2048 \n Do you want to continue</string>
+    <string name="game_yes_btn">Yes</string>
+    <string name="game_new_dialog_btn">New Game</string>
+    <string name="game_exit_dialog_btn">Close</string>
+    <string name="game_lose_title">You a loser </string>
+
+
+    <!--Calculator-->
+    <string name="calc_error_parse">Argument parse error</string>
+    <string name="calc_error_zero">Division by zero</string>
+    <string name="calc_error_sqrt">Negative under root</string>
 
     <string name="calc_btn_percent_text">%</string>
     <string name="calc_btn_ce_text">CE</string>
     <string name="calc_btn_clear_text">C</string>
     <string name="calc_btn_backspace_text">\u232B</string>
+    <string name="calc_btn_backspace_1DivideX">¹⁄ₓ</string>
+    <string name="calc_btn_backspace_xSquared">²</string>
+    <string name="calc_btn_backspace_xSquared_history">%s² = </string>
+    <string name="calc_inverse_history">\u215F\u200A(%s) =</string>
+    <string name="calc_btn_backspace_SuareRootX">√ₓ</string>
+    <string name="calc_btn_backspace_Divide">÷</string>
+    <string name="calc_btn_backspace_multiply">*</string>
 
-
+    <string name="calc_btn_0_text">0</string>
+    <string name="calc_btn_1_text">1</string>
+    <string name="calc_btn_2_text">2</string>
+    <string name="calc_btn_3_text">3</string>
+    <string name="calc_btn_4_text">4</string>
+    <string name="calc_btn_5_text">5</string>
+    <string name="calc_btn_6_text">6</string>
+    <string name="calc_btn_7_text">7</string>
+    <string name="calc_btn_8_text">8</string>
+    <string name="calc_btn_9_text">9</string>
+    <string name="calc_btn_minus_text">-</string>
+    <string name="calc_btn_plus_text">+</string>
+    <string name="calc_btn_calc_btn_plusMinus_text">+/-</string>
+    <string name="calc_btn_koma_text">.</string>
+    <string name="calc_btn_equals_text">=</string>
+    <string name="button_chat_text">Chat</string>
 </resources>

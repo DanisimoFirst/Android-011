@@ -7,107 +7,74 @@
     android:background="@color/calc_background"
     tools:context=".CalcActivity">
 
-    <TextView
-        android:id="@+id/tv_history"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="end"
-        android:textColor="@color/calc_history"
-        android:paddingEnd="10dp"
-        android:paddingStart="10dp"
-        android:textSize="24sp"
-        android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/tv_result"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="2+2 = " />
-
-    <TextView
-        android:id="@+id/tv_result"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="end"
-        android:paddingEnd="10dp"
-        android:paddingStart="10dp"
-        android:text=""
-        tools:text="86"
-        android:textColor="@color/calc_result"
-        android:textSize="64sp"
-        android:textStyle="normal"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@+id/tableLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tv_history"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="start"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text=""
+            android:textColor="@color/calc_history"
+            android:textSize="24sp"
+            tools:text="2 + 2 =" />
+
+        <TextView
+            android:id="@+id/tv_result"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:text=""
+            android:textColor="@color/calc_result"
+            android:textSize="64sp"
+            android:textStyle="normal"
+            tools:text="4" />
+
+    </LinearLayout>
 
     <TableLayout
         android:id="@+id/tableLayout"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        app:layout_constraintHeight_percent="0.75"
+        app:layout_constraintHeight_percent="0.8"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.95">
+        app:layout_constraintVertical_bias="0.97">
+
+
+
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1">
+
+
+            <Button
+                android:id="@+id/calc_btn_multiply"
+                style="@style/calc_btn_fn_style"
+                android:text="@string/calc_btn_backspace_multiply" />
 
             <Button
                 android:id="@+id/calc_btn_percent"
                 style="@style/calc_btn_fn_style"
                 android:text="@string/calc_btn_percent_text" />
-
-            <Button
-                android:id="@+id/calc_btn_ce"
-                style="@style/calc_btn_fn_style"
-                android:text="@string/calc_btn_ce_text" />
-
-            <Button
-                android:id="@+id/calc_btn_clear"
-                style="@style/calc_btn_fn_style"
-                android:text="@string/calc_btn_clear_text" />
-
-            <Button
-                android:id="@+id/calc_btn_back"
-                style="@style/calc_btn_fn_style"
-                android:text="@string/calc_btn_backspace_text" />
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1">
-            <Button
-                android:id="@+id/DivideX"
-                style="@style/calc_btn_fn_style"
-                android:text="@string/calc_btn_backspace_1DivideX" />
-
-            <Button
-                android:id="@+id/xSquared"
-                style="@style/calc_btn_fn_style"
-                android:text="@string/calc_btn_backspace_xSquared" />
-
-            <Button
-                android:id="@+id/SuareRootX"
-                style="@style/calc_btn_fn_style"
-                android:text="@string/calc_btn_backspace_SuareRootX" />
-
-            <Button
-                android:id="@+id/Divide"
-                style="@style/calc_btn_fn_style"
-                android:text="@string/calc_btn_backspace_Divide" />
-
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1">
 
             <Button
                 android:id="@+id/calc_btn_7"
@@ -123,11 +90,10 @@
                 android:id="@+id/calc_btn_9"
                 style="@style/calc_btn_op_style"
                 android:text="@string/calc_btn_9_text" />
-
             <Button
-                android:id="@+id/calc_btn_multiply"
+                android:id="@+id/calc_btn_ce"
                 style="@style/calc_btn_fn_style"
-                android:text="@string/calc_btn_backspace_Divide" />
+                android:text="@string/calc_btn_ce_text" />
 
         </TableRow>
 
@@ -135,6 +101,18 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1">
+
+            <Button
+                android:id="@+id/calc_btn_minus"
+                style="@style/calc_btn_fn_style"
+                android:text="@string/calc_btn_minus_text" />
+
+            <Button
+                android:id="@+id/DivideX"
+                style="@style/calc_btn_fn_style"
+                android:text="@string/calc_btn_backspace_1DivideX" />
+
+
 
             <Button
                 android:id="@+id/calc_btn_4"
@@ -151,10 +129,12 @@
                 style="@style/calc_btn_op_style"
                 android:text="@string/calc_btn_6_text" />
 
+
             <Button
-                android:id="@+id/calc_btn_minus"
+                android:id="@+id/calc_btn_back"
                 style="@style/calc_btn_fn_style"
-                android:text="@string/calc_btn_minus_text" />
+                android:text="@string/calc_btn_backspace_text" />
+
 
         </TableRow>
 
@@ -163,7 +143,15 @@
             android:layout_height="0dp"
             android:layout_weight="1">
 
+            <Button
+                android:id="@+id/calc_btn_plus"
+                style="@style/calc_btn_fn_style"
+                android:text="@string/calc_btn_plus_text" />
 
+            <Button
+                android:id="@+id/SuareRootX"
+                style="@style/calc_btn_fn_style"
+                android:text="@string/calc_btn_backspace_SuareRootX" />
             <Button
                 android:id="@+id/calc_btn_1"
                 style="@style/calc_btn_op_style"
@@ -178,11 +166,14 @@
                 android:id="@+id/calc_btn_3"
                 style="@style/calc_btn_op_style"
                 android:text="@string/calc_btn_3_text" />
-
             <Button
-                android:id="@+id/calc_btn_plus"
+                android:id="@+id/calc_btn_clear"
                 style="@style/calc_btn_fn_style"
-                android:text="@string/calc_btn_plus_text" />
+                android:text="@string/calc_btn_clear_text" />
+
+
+
+
 
         </TableRow>
 
@@ -190,6 +181,17 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1">
+
+            <Button
+                android:id="@+id/multiply"
+                style="@style/calc_btn_fn_style"
+                android:text="@string/calc_btn_backspace_Divide" />
+
+            <Button
+                android:id="@+id/xSquared"
+                style="@style/calc_btn_fn_style"
+                android:text="@string/calc_btn_backspace_xSquared" />
+
 
             <Button
                 android:id="@+id/calc_btn_plusMinus"
